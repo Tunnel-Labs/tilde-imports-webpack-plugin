@@ -12,7 +12,8 @@
 		"estree-walker": "^2.0.2",
 		"pkg-dir": "^5.0.0",
 		"acorn": "^8.9.0",
-		"glob-imports": "^1.0.0",
+		"get-monorepo-root": "^1.0.0",
+		"glob-imports": "^1.0.1",
 		"pathe": "^1.1.1",
 		"tilde-imports": "^1.0.0",
 		"webpack-virtual-modules": "^0.5.0"

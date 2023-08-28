@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -11,9 +11,12 @@ dependencies:
   estree-walker:
     specifier: ^2.0.2
     version: 2.0.2
-  glob-imports:
+  get-monorepo-root:
     specifier: ^1.0.0
     version: 1.0.0
+  glob-imports:
+    specifier: ^1.0.1
+    version: 1.0.1
   pathe:
     specifier: ^1.1.1
     version: 1.1.1
@@ -89,6 +92,13 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@tunnel/get-monorepo@1.0.0:
+    resolution: {integrity: sha512-uxvpiEmcIP8GdzIk9p9aozYUIJ+wQe3Rko+6W7uqyfnetoGjJznax0SJuKJS5+Hkm4x6NJL/nx/5CJjXBu56gg==}
+    dependencies:
+      map-obj: 5.0.2
+      pkg-up: 4.0.0
+    dev: false
 
   /@types/eslint-scope@3.7.4:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
@@ -451,11 +461,18 @@ packages:
       signal-exit: 4.1.0
     dev: false
 
-  /glob-imports@1.0.0:
-    resolution: {integrity: sha512-84TQ0rFA/dFTnPx+it/d/OMLEWuHnUaxNlBoCKtiowgzWjQw+2AY12xhoWDK+Sa//BrcnNB5HhLZpo+rXZf/SA==}
+  /get-monorepo-root@1.0.0:
+    resolution: {integrity: sha512-/sJTrWZHX+DRniBqoZ6W4hqYMNRbkDyWhz9vtNWH9aekW4SE7Aq8igQ4dZHqQLyt74GC57T496uQKUkKG+21gA==}
     dependencies:
+      map-obj: 5.0.2
+      pkg-up: 4.0.0
+    dev: false
+
+  /glob-imports@1.0.1:
+    resolution: {integrity: sha512-6hKCbp8m/vdC6ZECrg38GnYvfCvkIohvaH6baNVC0TfYMbfgvKjF4G0sVIAgKA/exk5bQyRvh0OyRe9kOcWSug==}
+    dependencies:
+      '@tunnel/get-monorepo': 1.0.0
       glob: 10.3.1
-      lion-utils: 0.2.2
     dev: false
 
   /glob-to-regexp@0.4.1:
@@ -548,6 +565,11 @@ packages:
   /lru-cache@10.0.1:
     resolution: {integrity: sha512-IJ4uwUTi2qCccrioU6g9g/5rvvVl13bsdczUUcqbciD9iLr095yj8DQKdObriEvuNSx325N1rV1O0sJFszx75g==}
     engines: {node: 14 || >=16.14}
+    dev: false
+
+  /map-obj@5.0.2:
+    resolution: {integrity: sha512-K6K2NgKnTXimT3779/4KxSvobxOtMmx1LBZ3NwRxT/MDIR3Br/fQ4Q+WCX5QxjyUR8zg5+RV9Tbf2c5pAWTD2A==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: false
 
   /merge-stream@2.0.0:

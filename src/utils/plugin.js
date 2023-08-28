@@ -3,7 +3,9 @@
 'use strict';
 
 const { NormalModuleReplacementPlugin } = require('webpack');
-const { expandTildeImport } = require('tilde-imports');
+// @ts-expect-error: no typings
+const { createTildeImportExpander } = require('tilde-imports');
+const { getMonorepoDirpath } = require('get-monorepo-root')
 
 module.exports = class TildeImportsPlugin {
 	/** @type {((resource: any) => boolean) | undefined} */
@@ -20,6 +22,10 @@ module.exports = class TildeImportsPlugin {
 		@param {import('webpack').Compiler} compiler
 	*/
 	apply(compiler) {
+		const expandTildeImport = createTildeImportExpander({
+			monorepoDirpath: getMonorepoDirpath(__dirname)
+		});
+
 		new NormalModuleReplacementPlugin(/^~/, (resource) => {
 			if (this.skip?.(resource)) {
 				return;
