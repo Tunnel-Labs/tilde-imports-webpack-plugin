@@ -1,6 +1,6 @@
 {
 	"name": "tilde-imports-webpack-plugin",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"type": "commonjs",
 	"exports": {
 		".": "./src/index.js"
@@ -20,5 +20,10 @@
 	},
 	"devDependencies": {
 		"webpack": "^5.88.2"
-	}
+	},
+	"files": [
+		"src",
+		"readme.md",
+		"package.json"
+	]
 }
