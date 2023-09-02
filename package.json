@@ -1,6 +1,6 @@
 {
 	"name": "tilde-imports-webpack-plugin",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"type": "commonjs",
 	"exports": {
 		".": "./src/index.js"
@@ -10,7 +10,7 @@
 	},
 	"dependencies": {
 		"get-monorepo-root": "^1.0.0",
-		"tilde-imports": "^2.0.0"
+		"tilde-imports": "^3.0.0"
 	},
 	"devDependencies": {
 		"webpack": "^5.88.2"

@@ -33,7 +33,7 @@ module.exports = class TildeImportsPlugin {
 
 			const expandedImport = expandTildeImport({
 				importSpecifier: resource.request,
-				importerFilePath: resource.context
+				importerFilepath: resource.context
 			});
 			resource.request = expandedImport;
 		}).apply(compiler);
